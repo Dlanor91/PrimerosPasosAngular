@@ -9,7 +9,7 @@ export class BasicosComponent {
   nombre? : string;
   nombreMio : string = "Ronald lima";
   correo : any = "rli@gmail.com";
-  edad:number = 43;
+  edad:number = 19;  
   fecha = new Date();
   html : string = `<strong>texto en negritas</strong>`;
   paises : Array<any>;

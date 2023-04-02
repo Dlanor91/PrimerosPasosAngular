@@ -8,3 +8,12 @@
     <li>html: <span [innerHTML]="html"></span></li>
     <li>paises {{paises}}</li>
 </ul>
+<hr>
+<h4>Condicionales</h4>
+<p *ngIf="edad>=18; else edadElse">Es mayor de edad</p>
+<ng-template #edadElse>
+    <p>No es mayor de edad, es muy joven aun</p>
+</ng-template>
+<hr>
+<h4>Operador Ternario</h4>
+<p>{{ (edad>=18)? 'ternario si es mayor':'ternario no es mayor'}}</p>

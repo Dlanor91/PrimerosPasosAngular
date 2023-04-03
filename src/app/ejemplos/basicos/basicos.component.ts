@@ -10,6 +10,7 @@ export class BasicosComponent {
   nombreMio : string = "Ronald lima";
   correo : any = "rli@gmail.com";
   edad:number = 19;  
+  numero: number =17;
   fecha = new Date();
   html : string = `<strong>texto en negritas</strong>`;
   paises : Array<any>;

@@ -17,3 +17,16 @@
 <hr>
 <h4>Operador Ternario</h4>
 <p>{{ (edad>=18)? 'ternario si es mayor':'ternario no es mayor'}}</p>
+<hr>
+<h4>Switch Case</h4>
+<div [ngSwitch]="numero">
+    <p *ngSwitchCase="12">Es 12</p>
+    <p *ngSwitchCase="13">Es 13</p>
+    <p *ngSwitchCase="14">Es 14</p>
+    <p *ngSwitchDefault>No es ninguna</p>
+</div>
+<hr>
+<h4>ng-Container</h4>
+<ng-container *ngIf="edad>=18">
+    se cumple la condicion
+</ng-container>

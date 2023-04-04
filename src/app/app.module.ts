@@ -12,6 +12,7 @@ import { BasicosComponent } from './ejemplos/basicos/basicos.component';
 import { Ejemplo5Component } from './ejemplos/ejemplo5/ejemplo5.component';
 import { FormateaFechaPipe } from './utilidades/formatea-fecha.pipe';
 import { FormateaNumerosPipe } from './utilidades/formatea-numeros.pipe';
+import { DataBindingComponent } from './ejemplos/data-binding/data-binding.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormateaNumerosPipe } from './utilidades/formatea-numeros.pipe';
     BasicosComponent,
     Ejemplo5Component,
     FormateaFechaPipe,
-    FormateaNumerosPipe
+    FormateaNumerosPipe,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,

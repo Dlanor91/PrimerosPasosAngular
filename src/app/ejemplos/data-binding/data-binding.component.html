@@ -1,0 +1,20 @@
+<h3>Data Binding</h3>
+<p>
+    Ejemplo Boton
+    <br /> <br />
+    <button [disabled]="disable" (click)="cambiar()">Presionar</button>
+</p>
+<div style="background-color: {{color}};">Hola interpolado</div>
+<hr>
+<div [style]="'background-color:'+ color+';'">hola con data binding</div>
+<hr>
+<p>
+    {{texto}}
+</p>
+<p [innerHTML]="texto">
+
+</p>
+<hr>
+<div>
+    <img [src]="'/assets/images/'+img" [width]="ancho" [height]="alto" />
+</div>

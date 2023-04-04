@@ -30,6 +30,14 @@ export class BasicosComponent {
         nombre: "Argentina",
         dominio: "ar"
       },
+      {
+        nombre: "Cuba",
+        dominio: "cu"
+      },
+      {
+        nombre: "Puerto Rico",
+        dominio: "pr"
+      },
     ];
   }
 }

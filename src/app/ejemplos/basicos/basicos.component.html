@@ -30,3 +30,35 @@
 <ng-container *ngIf="edad>=18">
     se cumple la condicion
 </ng-container>
+<hr>
+<h4>ngFor</h4>
+<ul>
+    <li *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]; let i = index">
+        {{i+1}} - numero: {{item}}
+    </li>
+</ul>
+<hr>
+<h4>Recorrer paises</h4>
+<ul>
+    <li *ngFor="let pais of paises; let i = index; first as primero; last as ultima">
+        {{pais.nombre}}({{pais.dominio}})
+        <span *ngIf="primero">Este es el primer indice</span>
+        <span *ngIf="ultima">Este es el ultimo indice</span>
+    </li>
+</ul>
+<hr>
+<h4>ngTemplate</h4>
+<ul>
+    <ng-template ngFor let-pais [ngForOf]="paises" let-i="index">
+        <li>{{pais.nombre}}({{pais.dominio}})</li>
+    </ng-template>
+</ul>
+<hr>
+<h4>odd y even</h4>
+<div *ngFor="let pais of paises; let impar = odd;let par = even;let i = index" [ngClass]="{azul:par,verde:impar}">
+    <p>
+        {{i}} - {{pais.nombre}}({{pais.dominio}})
+        <span *ngIf="impar">es impar</span>
+        <span *ngIf="par">es par</span>
+    </p>
+</div>

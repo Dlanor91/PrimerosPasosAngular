@@ -22,6 +22,7 @@ import { FormulariosComponent } from './paginas/formularios/formularios.componen
 import { MaterialComponent } from './paginas/material/material.component';
 import { ErrorComponent } from './paginas/error/error.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,7 @@ import { ErrorComponent } from './paginas/error/error.component';
     Ruta2Component,
     FormulariosComponent,
     MaterialComponent,
-    ErrorComponent
+    ErrorComponent,   
   ],
   imports: [
     BrowserModule,

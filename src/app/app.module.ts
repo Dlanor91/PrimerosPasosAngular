@@ -14,6 +14,8 @@ import { FormateaFechaPipe } from './utilidades/formatea-fecha.pipe';
 import { FormateaNumerosPipe } from './utilidades/formatea-numeros.pipe';
 import { DataBindingComponent } from './ejemplos/data-binding/data-binding.component';
 import { CicloDeVidaComponent } from './ejemplos/ciclo-de-vida/ciclo-de-vida.component';
+import { ComunicacionComponent } from './ejemplos/comunicacion/comunicacion.component';
+import { Comunicacion2Component } from './ejemplos/comunicacion2/comunicacion2.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { CicloDeVidaComponent } from './ejemplos/ciclo-de-vida/ciclo-de-vida.com
     FormateaFechaPipe,
     FormateaNumerosPipe,
     DataBindingComponent,
-    CicloDeVidaComponent
+    CicloDeVidaComponent,
+    ComunicacionComponent,
+    Comunicacion2Component
   ],
   imports: [
     BrowserModule,

@@ -9,17 +9,19 @@ import { Ejemplo5Component } from './ejemplos/ejemplo5/ejemplo5.component';
 import { CicloDeVidaComponent } from './ejemplos/ciclo-de-vida/ciclo-de-vida.component';
 import { ComunicacionComponent } from './ejemplos/comunicacion/comunicacion.component';
 import { DataBindingComponent } from './ejemplos/data-binding/data-binding.component';
+import { ErrorComponent } from './paginas/error/error.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
   {path:"formularios",component:FormulariosComponent},
   {path:"material",component:MaterialComponent},
-  {path:"ruta-2",component:Ruta2Component},
+  {path:"ruta-2/:id/:slug",component:Ruta2Component},
   {path:"basicos",component:BasicosComponent},
   {path:"ejemplo-5",component:Ejemplo5Component},
   {path:"data-binding",component:DataBindingComponent},
   {path:"ciclo-vida",component:CicloDeVidaComponent},
   {path:"comunicacion",component:ComunicacionComponent},
+  {path:"**",component:ErrorComponent},
 ];
 
 @NgModule({

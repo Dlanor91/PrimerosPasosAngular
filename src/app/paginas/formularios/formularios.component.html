@@ -1,1 +1,31 @@
-<p>formularios works!</p>
+<h3>Formulario basico con ngModel</h3>
+<div class="container">
+    <div class="row">
+        <form name="form" id="form" (submit)="enviar()" #formulario="ngForm">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" class="form-control" [(ngModel)]="usuario.nombre" />
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" class="form-control" [(ngModel)]="usuario.correo" />
+            </div>
+            <div class="form-group">
+                <label for="telefono">Telefono:</label>
+                <input type="text" name="telefono" class="form-control" [(ngModel)]="usuario.telefono" />
+            </div>
+            <div class="form-group">
+                <label for="direccion">Direccion:</label>
+                <input type="text" name="direccion" class="form-control" [(ngModel)]="usuario.direccion" />
+            </div>
+            <div class="form-group">
+                <label for="pais">Pais:</label>
+                <select name="pais" class="form-control" [(ngModel)]="usuario.pais">
+                    <option *ngFor="let pais of paises" value="{{pais.nombre}}">{{pais.nombre}}</option>
+                </select>
+            </div>
+            <hr>
+            <input type="submit" value="Enviar" class="btn btn-primary">
+        </form>
+    </div>
+</div>

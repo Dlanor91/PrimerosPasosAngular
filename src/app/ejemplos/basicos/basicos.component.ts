@@ -16,8 +16,8 @@ export class BasicosComponent {
   paises : Array<any>;
   ejemplo : string;
   constructor(){
-    this.nombre = "Ridchel"
-    this,this.paises = [
+    this.nombre = "Ridchel",
+    this.paises = [
       {
         nombre: "Chile",
         dominio: "cl"

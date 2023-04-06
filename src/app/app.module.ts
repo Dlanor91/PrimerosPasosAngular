@@ -24,6 +24,7 @@ import { ErrorComponent } from './paginas/error/error.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CabeceroComponent } from './componentes/cabecero/cabecero.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgbModule
   ],
   providers: [],

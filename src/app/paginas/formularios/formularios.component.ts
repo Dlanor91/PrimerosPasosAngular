@@ -10,6 +10,7 @@ export class FormulariosComponent implements OnInit{
 
   usuario:any;
   paises:Array<any>;
+  users:Array<any> = [];
 
   constructor(private setearTitle:Title){
     this.usuario={
@@ -52,7 +53,12 @@ export class FormulariosComponent implements OnInit{
   }
 
   enviar(){
-    console.log(this.usuario.nombre + " | " + this.usuario.correo + " | " + this.usuario.telefono 
-    +" | " + this.usuario.direccion +" | " + this.usuario.pais);
+    this.users.push({
+      nombre:this.usuario.nombre,
+      correo:this.usuario.correo,
+      telefono:this.usuario.telefono,
+      direccion:this.usuario.direccion,
+      pais:this.usuario.pais
+    });
   }
 }

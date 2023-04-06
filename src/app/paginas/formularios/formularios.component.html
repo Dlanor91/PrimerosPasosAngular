@@ -27,5 +27,27 @@
             <hr>
             <input type="submit" value="Enviar" class="btn btn-primary">
         </form>
+
+        <h4>Usuarios Registrados ({{users.length}})</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                    <th>Pais</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{user.nombre}}</td>
+                    <td>{{user.correo}}</td>
+                    <td>{{user.telefono}}</td>
+                    <td>{{user.direccion}}</td>
+                    <td>{{user.pais}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

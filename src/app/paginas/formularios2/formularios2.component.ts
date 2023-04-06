@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ValidaSelectDirectiveValidator } from 'src/app/validaciones/valida-select.directive';
 
 @Component({
   selector: 'app-formularios2',
@@ -69,9 +70,10 @@ paises:Array<any>;
             this.usuario.direccion          
           ),   
           pais: new FormControl(          
-            this.usuario.pais          
+                     
           ),        
-        }
+        },
+        {validators: ValidaSelectDirectiveValidator}
       );      
   }
 
@@ -93,6 +95,6 @@ paises:Array<any>;
   }
 
   enviar(){
-    console.log(this.formulario.value.nombre)
+    console.log(this.formulario.value.nombre + " | " +this.formulario.value.pais)
   }
 }

@@ -2,7 +2,7 @@
 <form [formGroup]="formulario" #formDir="ngForm">
     <div [hidden]="formDir.submitted">
         <div class="cross-validation"
-            [class.cross-validation-error]="formulario.invalid && (formulario.touched || formulario.dirty)">
+            [class.cross-validation-error]="formulario.errors?.['ValidaSelect'] && formulario.invalid && (formulario.touched || formulario.dirty)">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" class="form-control" formControlName="nombre" required />
@@ -48,6 +48,9 @@
                 <select class="form-control" formControlName="pais">
                     <option *ngFor="let pais of paises" value="{{pais.nombre}}">{{pais.nombre}}</option>
                 </select>
+                <div *ngIf="formulario.errors?.['ValidaSelectNull'] && (formulario.dirty || formulario.touched)"
+                    class="alert alert-danger">Seleccione un pais
+                </div>
             </div>
         </div>
     </div>

@@ -26,6 +26,7 @@ import { CabeceroComponent } from './componentes/cabecero/cabecero.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Formularios2Component } from './paginas/formularios2/formularios2.component';
+import { ValidaSelectDirective } from './validaciones/valida-select.directive';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { Formularios2Component } from './paginas/formularios2/formularios2.compo
     ErrorComponent,
     CabeceroComponent,
     FooterComponent,
-    Formularios2Component,   
+    Formularios2Component,
+    ValidaSelectDirective,   
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ export class FormulariosComponent implements OnInit{
   usuario:any;
   paises:Array<any>;
   users:Array<any> = [];
+  checkboxMarca: boolean = false; 
 
   constructor(private setearTitle:Title){
     this.usuario={
@@ -18,7 +19,7 @@ export class FormulariosComponent implements OnInit{
       correo:"",
       telefono:"",
       direccion:"",
-      pais:""
+      pais:""  
     },
     this.paises = [
       {
@@ -50,6 +51,16 @@ export class FormulariosComponent implements OnInit{
 
   public cambiarTitulo(titulo:string){
     this.setearTitle.setTitle(titulo);
+  }
+
+  seleccionaCheck(evento:any){
+    if(evento.target.checked){
+      this.checkboxMarca = true;
+      alert("si");
+    }else{
+      this.checkboxMarca = false;
+      alert("no");
+    }
   }
 
   enviar(){

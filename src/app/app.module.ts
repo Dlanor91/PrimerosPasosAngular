@@ -25,6 +25,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CabeceroComponent } from './componentes/cabecero/cabecero.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Formularios2Component } from './paginas/formularios2/formularios2.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MaterialComponent,
     ErrorComponent,
     CabeceroComponent,
-    FooterComponent,   
+    FooterComponent,
+    Formularios2Component,   
   ],
   imports: [
     BrowserModule,

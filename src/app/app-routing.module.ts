@@ -10,10 +10,12 @@ import { CicloDeVidaComponent } from './ejemplos/ciclo-de-vida/ciclo-de-vida.com
 import { ComunicacionComponent } from './ejemplos/comunicacion/comunicacion.component';
 import { DataBindingComponent } from './ejemplos/data-binding/data-binding.component';
 import { ErrorComponent } from './paginas/error/error.component';
+import { Formularios2Component } from './paginas/formularios2/formularios2.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
   {path:"formularios",component:FormulariosComponent},
+  {path:"formularios2",component:Formularios2Component},
   {path:"material",component:MaterialComponent},
   {path:"ruta-2/:id/:slug",component:Ruta2Component},
   {path:"basicos",component:BasicosComponent},

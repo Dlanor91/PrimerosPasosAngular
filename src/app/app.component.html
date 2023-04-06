@@ -1,31 +1,6 @@
-<H1>Hola mundo desde angular</H1>
-<ul>
-    <li>
-        <a routerLink="/">Home</a>
-    </li>
-    <li>
-        <a routerLink="/ruta-2/45/mi-mama-me-mima" routerLinkActive="enlaces">Ruta 2</a>
-    </li>
-    <li>
-        <a routerLink="/formularios" routerLinkActive="enlaces">Formularios</a>
-    </li>
-    <li>
-        <a routerLink="/material" routerLinkActive="enlaces">Material</a>
-    </li>
-    <li>
-        <a routerLink="/basicos" routerLinkActive="enlaces">Basicos</a>
-    </li>
-    <li>
-        <a routerLink="/ejemplo-5" routerLinkActive="enlaces">Ejemplo 5</a>
-    </li>
-    <li>
-        <a routerLink="/data-binding" routerLinkActive="enlaces">Data Binding</a>
-    </li>
-    <li>
-        <a routerLink="/ciclo-vida" routerLinkActive="enlaces">Ciclo de Vida</a>
-    </li>
-    <li>
-        <a routerLink="/comunicacion" routerLinkActive="enlaces">Comunicacion</a>
-    </li>
-</ul>
-<router-outlet></router-outlet>
+<app-cabecero></app-cabecero>
+<main class="container">
+    <router-outlet></router-outlet>
+</main>
+
+<app-footer></app-footer>

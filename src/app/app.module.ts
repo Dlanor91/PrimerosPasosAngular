@@ -21,6 +21,9 @@ import { Ruta2Component } from './paginas/ruta2/ruta2.component';
 import { FormulariosComponent } from './paginas/formularios/formularios.component';
 import { MaterialComponent } from './paginas/material/material.component';
 import { ErrorComponent } from './paginas/error/error.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CabeceroComponent } from './componentes/cabecero/cabecero.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 
 @NgModule({
@@ -41,11 +44,14 @@ import { ErrorComponent } from './paginas/error/error.component';
     Ruta2Component,
     FormulariosComponent,
     MaterialComponent,
-    ErrorComponent,   
+    ErrorComponent,
+    CabeceroComponent,
+    FooterComponent,   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

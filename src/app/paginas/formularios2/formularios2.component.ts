@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ValidaSelectDirectiveValidator } from 'src/app/validaciones/valida-select.directive';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-formularios2',
@@ -95,6 +96,12 @@ paises:Array<any>;
   }
 
   enviar(){
-    console.log(this.formulario.value.nombre + " | " +this.formulario.value.pais)
+    let datos = this.formulario.value.nombre + " | " +this.formulario.value.pais;
+    swal.fire(
+      {icon:'success',//puede ser error o info y notifica error o informacion
+      timer:5000,
+      title:'OK',      
+      text:datos }   
+    )
   }
 }

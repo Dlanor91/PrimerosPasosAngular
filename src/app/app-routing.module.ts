@@ -11,6 +11,7 @@ import { ComunicacionComponent } from './ejemplos/comunicacion/comunicacion.comp
 import { DataBindingComponent } from './ejemplos/data-binding/data-binding.component';
 import { ErrorComponent } from './paginas/error/error.component';
 import { Formularios2Component } from './paginas/formularios2/formularios2.component';
+import { MaterialBotonesComponent } from './paginas/material-botones/material-botones.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:"data-binding",component:DataBindingComponent},
   {path:"ciclo-vida",component:CicloDeVidaComponent},
   {path:"comunicacion",component:ComunicacionComponent},
+  {path:"material/botones",component:MaterialBotonesComponent},
   {path:"**",component:ErrorComponent},
 ];
 

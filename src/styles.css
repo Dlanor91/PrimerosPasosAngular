@@ -55,3 +55,5 @@
     font-size: 20px;
     text-decoration: overline;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

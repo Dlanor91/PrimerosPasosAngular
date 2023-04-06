@@ -27,6 +27,12 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Formularios2Component } from './paginas/formularios2/formularios2.component';
 import { ValidaSelectDirective } from './validaciones/valida-select.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialBotonesComponent } from './paginas/material-botones/material-botones.component';
+
+//material
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -50,15 +56,19 @@ import { ValidaSelectDirective } from './validaciones/valida-select.directive';
     CabeceroComponent,
     FooterComponent,
     Formularios2Component,
-    ValidaSelectDirective,   
+    ValidaSelectDirective, 
+    MaterialBotonesComponent       
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
-  ],
+    NgbModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule
+   ],
   providers: [],
   bootstrap: [AppComponent]
 })

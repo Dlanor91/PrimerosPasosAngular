@@ -1,27 +1,58 @@
 <h4>Formulario reactivo</h4>
-<form [formGroup]="formulario" #forDir="ngForm">
-    <div class="form-group">
-        <label for="nombre">Nombre:</label>
-        <input type="text" class="form-control" formControlName="nombre" required />
-    </div>
-    <div class="form-group">
-        <label for="correo">Email:</label>
-        <input type="text" class="form-control" formControlName="correo" required />
-    </div>
-    <div class="form-group">
-        <label for="telefono">Telefono:</label>
-        <input type="text" class="form-control" formControlName="telefono" required />
-    </div>
-    <div class="form-group">
-        <label for="direccion">Direccion:</label>
-        <input type="text" class="form-control" required formControlName="direccion" required="" />
-    </div>
-    <div class=" form-group">
-        <label for="pais">Pais:</label>
-        <select class="form-control">
-            <option *ngFor="let pais of paises" value="{{pais.nombre}}">{{pais.nombre}}</option>
-        </select>
+<form [formGroup]="formulario" #formDir="ngForm">
+    <div [hidden]="formDir.submitted">
+        <div class="cross-validation"
+            [class.cross-validation-error]="formulario.invalid && (formulario.touched || formulario.dirty)">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" formControlName="nombre" required />
+                <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert alert-danger">
+                    <div *ngIf="nombre.errors?.['required']">
+                        El campo nombre es obligatorio
+                    </div>
+                    <div *ngIf="nombre.errors?.['minlength']">
+                        El campo debe tener al menos 4 carateres
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="correo">Email:</label>
+                <input type="text" class="form-control" formControlName="correo" required />
+                <div *ngIf="correo.invalid && (correo.dirty || correo.touched)" class="alert alert-danger">
+                    <div *ngIf="correo.errors?.['required']">
+                        El campo E-mail es obligatorio
+                    </div>
+                    <div *ngIf="correo.errors?.['pattern']">
+                        El Email debe tener un formato valido
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Telefono:</label>
+                <input type="text" class="form-control" formControlName="telefono" required />
+                <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)" class="alert alert-danger">
+                    <div *ngIf="telefono.errors?.['required']">
+                        El campo telefono es obligatorio
+                    </div>
+                    <div *ngIf="telefono.errors?.['pattern']">
+                        El campo telefono solo admite numeros
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Direccion:</label>
+                <input type="text" class="form-control" formControlName="direccion" required />
+            </div>
+            <div class=" form-group">
+                <label for="pais">Pais:</label>
+                <select class="form-control" formControlName="pais">
+                    <option *ngFor="let pais of paises" value="{{pais.nombre}}">{{pais.nombre}}</option>
+                </select>
+            </div>
+        </div>
     </div>
     <hr>
-    <button type="submit" class="btn btn-primary" [disabled]="formulario.invalid">Enviar</button>
+    <button type="submit" class="btn btn-primary" (click)="enviar()" [disabled]="formulario.invalid">Enviar</button>
+    <br>
+    <button type="button" class="btn btn-primary" (click)="formDir.resetForm({})">Resetear</button>
 </form>

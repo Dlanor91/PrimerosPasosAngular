@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formularios2',
@@ -45,18 +45,54 @@ paises:Array<any>;
       this.formulario = new FormGroup(
         {
           nombre: new FormControl(          
-            this.usuario.nombre          
+            this.usuario.nombre,
+            [
+              Validators.required,
+              Validators.minLength(4)
+            ]          
           ),
           correo: new FormControl(          
-            this.usuario.correo          
+            this.usuario.correo,
+            [
+              Validators.required,
+              Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")
+            ]          
           ),
           telefono: new FormControl(          
-            this.usuario.telefono          
+            this.usuario.telefono,
+            [
+              Validators.required,
+              Validators.pattern("^[0-9]*$")
+            ]         
           ),
           direccion: new FormControl(          
             this.usuario.direccion          
-          ),          
+          ),   
+          pais: new FormControl(          
+            this.usuario.pais          
+          ),        
         }
-      );
+      );      
+  }
+
+  //invocacion de los metodos getters del formulario
+  get nombre(){
+    return this.formulario.get('nombre')!; 
+  }
+  get correo(){
+    return this.formulario.get('correo')!; 
+  }
+  get direccion(){
+    return this.formulario.get('direccion')!; 
+  }
+  get telefono(){
+    return this.formulario.get('telefono')!; 
+  }
+  get pais(){
+    return this.formulario.get('pais')!; 
+  }
+
+  enviar(){
+    console.log(this.formulario.value.nombre)
   }
 }

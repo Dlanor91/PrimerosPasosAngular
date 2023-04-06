@@ -25,7 +25,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CabeceroComponent } from './componentes/cabecero/cabecero.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

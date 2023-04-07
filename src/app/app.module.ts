@@ -45,6 +45,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -90,7 +91,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatDialogModule,
     MatExpansionModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatCardModule
    ],
   providers: [],
   bootstrap: [AppComponent]

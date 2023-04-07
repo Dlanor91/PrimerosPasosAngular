@@ -34,6 +34,8 @@ import { MaterialTabsComponent } from './paginas/material-tabs/material-tabs.com
 import { MaterialDialogsComponent } from './paginas/material-dialogs/material-dialogs.component';
 import { MaterialCardsComponent } from './paginas/material-cards/material-cards.component';
 import { MaterialPanelExpansionComponent } from './paginas/material-panel-expansion/material-panel-expansion.component';
+import { ModalComponent } from './paginas/modal/modal.component';
+import { ModalFormularioComponent } from './paginas/modal-formulario/modal-formulario.component';
 
 //material-angular
 import {MatButtonModule} from '@angular/material/button';
@@ -46,8 +48,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatCardModule} from '@angular/material/card';
-import { ModalComponent } from './paginas/modal/modal.component';
-
 
 @NgModule({
   declarations: [
@@ -73,9 +73,10 @@ import { ModalComponent } from './paginas/modal/modal.component';
     Formularios2Component,
     ValidaSelectDirective, 
     MaterialBotonesComponent, MaterialInputComponent, MaterialTabsComponent, MaterialDialogsComponent, MaterialCardsComponent,
-     MaterialPanelExpansionComponent,
-     ModalComponent,
-      
+    MaterialPanelExpansionComponent,
+    ModalComponent,
+    ModalFormularioComponent
+         
        
   ],
   imports: [

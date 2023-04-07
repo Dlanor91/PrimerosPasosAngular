@@ -1,0 +1,76 @@
+<h3>Ventana Modal con Formulario</h3>
+<p>
+    <button class="btn btn-danger" (click)="abrir()">Abrir</button>
+</p>
+
+<ng-template #myModalConf let-modal>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Titulo </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <form name="form" id="form" (submit)="enviar()" #formulario="ngForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" class="form-control" [(ngModel)]="usuario.nombre"
+                            #nombre="ngModel" required="true" />
+                        <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert alert-danger">
+                            <div *ngIf="nombre.errors">
+                                El campo nombre es obligatorio
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="text" name="email" class="form-control" #correo="ngModel"
+                            [(ngModel)]="usuario.correo" required="true"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                        <div *ngIf="correo.invalid && (correo.dirty || correo.touched)" class="alert alert-danger">
+                            <div *ngIf="correo.errors">
+                                El campo E-mail es obligatorio
+                            </div>
+                            <div *ngIf="!correo.valid && correo.touched">
+                                El E-mail ingresado no es valido
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Telefono:</label>
+                        <input type="text" name="telefono" class="form-control" #telefono="ngModel"
+                            [(ngModel)]="usuario.telefono" required="true" />
+                        <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)"
+                            class="alert alert-danger">
+                            <div *ngIf="telefono.errors">
+                                El campo telefono es obligatorio
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Direccion:</label>
+                        <input type="text" name="direccion" class="form-control" #direccion="ngModel"
+                            [(ngModel)]="usuario.direccion" required="true" />
+                        <div *ngIf="direccion.invalid && (direccion.dirty || direccion.touched)"
+                            class="alert alert-danger">
+                            <div *ngIf="direccion.errors">
+                                El campo direccion es obligatorio
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pais">Pais:</label>
+                        <select name="pais" class="form-control" [(ngModel)]="usuario.pais">
+                            <option *ngFor="let pais of paises" value="{{pais.nombre}}">{{pais.nombre}}</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <input type="submit" value="Enviar" class="btn btn-primary" [disabled]="!formulario.form.valid">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</ng-template>

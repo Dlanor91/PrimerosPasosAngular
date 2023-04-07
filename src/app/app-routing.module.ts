@@ -18,6 +18,7 @@ import { MaterialDialogsComponent } from './paginas/material-dialogs/material-di
 import { MaterialPanelExpansionComponent } from './paginas/material-panel-expansion/material-panel-expansion.component';
 import { MaterialCardsComponent } from './paginas/material-cards/material-cards.component';
 import { ModalComponent } from './paginas/modal/modal.component';
+import { ModalFormularioComponent } from './paginas/modal-formulario/modal-formulario.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -37,6 +38,7 @@ const routes: Routes = [
   {path:"material/panel-expansion",component:MaterialPanelExpansionComponent},
   {path:"material/cards",component:MaterialCardsComponent},
   {path:"modal",component:ModalComponent},
+  {path:"modal-formulario",component:ModalFormularioComponent},
   {path:"**",component:ErrorComponent},
 ];
 

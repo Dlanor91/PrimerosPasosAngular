@@ -12,6 +12,11 @@ import { DataBindingComponent } from './ejemplos/data-binding/data-binding.compo
 import { ErrorComponent } from './paginas/error/error.component';
 import { Formularios2Component } from './paginas/formularios2/formularios2.component';
 import { MaterialBotonesComponent } from './paginas/material-botones/material-botones.component';
+import { MaterialInputComponent } from './paginas/material-input/material-input.component';
+import { MaterialTabsComponent } from './paginas/material-tabs/material-tabs.component';
+import { MaterialDialogsComponent } from './paginas/material-dialogs/material-dialogs.component';
+import { MaterialPanelExpansionComponent } from './paginas/material-panel-expansion/material-panel-expansion.component';
+import { MaterialCardsComponent } from './paginas/material-cards/material-cards.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -25,6 +30,11 @@ const routes: Routes = [
   {path:"ciclo-vida",component:CicloDeVidaComponent},
   {path:"comunicacion",component:ComunicacionComponent},
   {path:"material/botones",component:MaterialBotonesComponent},
+  {path:"material/input",component:MaterialInputComponent},
+  {path:"material/tabs",component:MaterialTabsComponent},
+  {path:"material/dialogs",component:MaterialDialogsComponent},
+  {path:"material/panel-expansion",component:MaterialPanelExpansionComponent},
+  {path:"material/cards",component:MaterialCardsComponent},
   {path:"**",component:ErrorComponent},
 ];
 

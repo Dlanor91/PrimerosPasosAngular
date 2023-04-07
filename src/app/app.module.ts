@@ -29,10 +29,16 @@ import { Formularios2Component } from './paginas/formularios2/formularios2.compo
 import { ValidaSelectDirective } from './validaciones/valida-select.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialBotonesComponent } from './paginas/material-botones/material-botones.component';
+import { MaterialInputComponent } from './paginas/material-input/material-input.component';
+import { MaterialTabsComponent } from './paginas/material-tabs/material-tabs.component';
+import { MaterialDialogsComponent } from './paginas/material-dialogs/material-dialogs.component';
+import { MaterialCardsComponent } from './paginas/material-cards/material-cards.component';
+import { MaterialPanelExpansionComponent } from './paginas/material-panel-expansion/material-panel-expansion.component';
 
 //material
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -57,7 +63,7 @@ import {MatIconModule} from '@angular/material/icon';
     FooterComponent,
     Formularios2Component,
     ValidaSelectDirective, 
-    MaterialBotonesComponent       
+    MaterialBotonesComponent, MaterialInputComponent, MaterialTabsComponent, MaterialDialogsComponent, MaterialCardsComponent, MaterialPanelExpansionComponent       
   ],
   imports: [
     BrowserModule,
@@ -67,7 +73,8 @@ import {MatIconModule} from '@angular/material/icon';
     NgbModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule
    ],
   providers: [],
   bootstrap: [AppComponent]

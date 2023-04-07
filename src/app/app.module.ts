@@ -35,13 +35,13 @@ import { MaterialDialogsComponent } from './paginas/material-dialogs/material-di
 import { MaterialCardsComponent } from './paginas/material-cards/material-cards.component';
 import { MaterialPanelExpansionComponent } from './paginas/material-panel-expansion/material-panel-expansion.component';
 
-//material
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -66,7 +66,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     FooterComponent,
     Formularios2Component,
     ValidaSelectDirective, 
-    MaterialBotonesComponent, MaterialInputComponent, MaterialTabsComponent, MaterialDialogsComponent, MaterialCardsComponent, MaterialPanelExpansionComponent       
+    MaterialBotonesComponent, MaterialInputComponent, MaterialTabsComponent, MaterialDialogsComponent, MaterialCardsComponent,
+     MaterialPanelExpansionComponent, 
+       
   ],
   imports: [
     BrowserModule,

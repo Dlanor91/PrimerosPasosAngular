@@ -10,3 +10,24 @@
     </ol>
 </nav>
 <h3>Input</h3>
+<div class="contenedor">
+    <mat-form-field>
+        <input matInput type="number" [(ngModel)]="numero1" placeholder="Ingrese un numero" />
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="number" [(ngModel)]="numero2" placeholder="Ingrese otro numero" />
+    </mat-form-field>
+
+    <mat-slide-toggle [(ngModel)]="opcion1">Sumar</mat-slide-toggle>
+    <mat-slide-toggle [(ngModel)]="opcion2">Restar</mat-slide-toggle>
+    <mat-slide-toggle [(ngModel)]="opcion3">Multiplicar</mat-slide-toggle>
+    <mat-slide-toggle [(ngModel)]="opcion4">Dividir</mat-slide-toggle>
+
+    <button mat-raised-button (click)="calcular()" color="primary">Calcular</button>
+    <hr>
+    <p>
+        {{resultado}}
+    </p>
+
+</div>

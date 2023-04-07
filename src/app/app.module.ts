@@ -37,6 +37,7 @@ import { MaterialPanelExpansionComponent } from './paginas/material-panel-expans
 import { ModalComponent } from './paginas/modal/modal.component';
 import { ModalFormularioComponent } from './paginas/modal-formulario/modal-formulario.component';
 import { MomentComponent } from './paginas/moment/moment.component';
+import { GraficosComponent } from './paginas/graficos/graficos.component';
 
 //material-angular
 import {MatButtonModule} from '@angular/material/button';
@@ -49,6 +50,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatCardModule} from '@angular/material/card';
+
+//Componente de grafico
+import { GoogleChartsModule } from 'angular-google-charts';
 
 
 @NgModule({
@@ -78,7 +82,8 @@ import {MatCardModule} from '@angular/material/card';
     MaterialPanelExpansionComponent,
     ModalComponent,
     ModalFormularioComponent,
-    MomentComponent
+    MomentComponent,
+    GraficosComponent
          
        
   ],
@@ -98,7 +103,8 @@ import {MatCardModule} from '@angular/material/card';
     MatExpansionModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatCardModule
+    MatCardModule,
+    GoogleChartsModule
    ],
   providers: [],
   bootstrap: [AppComponent]

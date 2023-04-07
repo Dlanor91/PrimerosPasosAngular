@@ -20,6 +20,7 @@ import { MaterialCardsComponent } from './paginas/material-cards/material-cards.
 import { ModalComponent } from './paginas/modal/modal.component';
 import { ModalFormularioComponent } from './paginas/modal-formulario/modal-formulario.component';
 import { MomentComponent } from './paginas/moment/moment.component';
+import { GraficosComponent } from './paginas/graficos/graficos.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -41,6 +42,7 @@ const routes: Routes = [
   {path:"modal",component:ModalComponent},
   {path:"modal-formulario",component:ModalFormularioComponent},
   {path:"moment",component:MomentComponent},
+  {path:"graficos",component:GraficosComponent},
   {path:"**",component:ErrorComponent},
 ];
 

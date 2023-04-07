@@ -24,7 +24,7 @@ import { ErrorComponent } from './paginas/error/error.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CabeceroComponent } from './componentes/cabecero/cabecero.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Formularios2Component } from './paginas/formularios2/formularios2.component';
 import { ValidaSelectDirective } from './validaciones/valida-select.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -35,12 +35,16 @@ import { MaterialDialogsComponent } from './paginas/material-dialogs/material-di
 import { MaterialCardsComponent } from './paginas/material-cards/material-cards.component';
 import { MaterialPanelExpansionComponent } from './paginas/material-panel-expansion/material-panel-expansion.component';
 
+//material-angular
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -67,7 +71,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     Formularios2Component,
     ValidaSelectDirective, 
     MaterialBotonesComponent, MaterialInputComponent, MaterialTabsComponent, MaterialDialogsComponent, MaterialCardsComponent,
-     MaterialPanelExpansionComponent, 
+     MaterialPanelExpansionComponent,
+      
        
   ],
   imports: [
@@ -82,7 +87,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatInputModule,
     MatSlideToggleModule,
     MatTabsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule
    ],
   providers: [],
   bootstrap: [AppComponent]

@@ -19,6 +19,7 @@ import { MaterialPanelExpansionComponent } from './paginas/material-panel-expans
 import { MaterialCardsComponent } from './paginas/material-cards/material-cards.component';
 import { ModalComponent } from './paginas/modal/modal.component';
 import { ModalFormularioComponent } from './paginas/modal-formulario/modal-formulario.component';
+import { MomentComponent } from './paginas/moment/moment.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -39,6 +40,7 @@ const routes: Routes = [
   {path:"material/cards",component:MaterialCardsComponent},
   {path:"modal",component:ModalComponent},
   {path:"modal-formulario",component:ModalFormularioComponent},
+  {path:"moment",component:MomentComponent},
   {path:"**",component:ErrorComponent},
 ];
 

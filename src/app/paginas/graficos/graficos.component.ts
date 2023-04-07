@@ -12,8 +12,8 @@ export class GraficosComponent {
     ['JavaScript',1200],
     ['Angular',1500],
     ['Vue',1400],
-    ['Python',1100],
-    ['C#',1800],
+    ['Python',1000],
+    ['C#',1800]
   ]
 
   columnas = ['Lenguajes','Profesionales']
@@ -21,8 +21,8 @@ export class GraficosComponent {
     colors:['red','blue','green','#E9967A','#f6c7b6'],
     is3D:true
   };
-  //tipo: ChartType = ChartType.PieChart;
-  tipo: ChartType = ChartType.AreaChart;
+  tipo: ChartType = ChartType.PieChart;
+ //tipo: ChartType = ChartType.AreaChart;
   //tipo: ChartType = ChartType.Gauge;
 
 }

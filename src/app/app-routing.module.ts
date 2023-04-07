@@ -17,6 +17,7 @@ import { MaterialTabsComponent } from './paginas/material-tabs/material-tabs.com
 import { MaterialDialogsComponent } from './paginas/material-dialogs/material-dialogs.component';
 import { MaterialPanelExpansionComponent } from './paginas/material-panel-expansion/material-panel-expansion.component';
 import { MaterialCardsComponent } from './paginas/material-cards/material-cards.component';
+import { ModalComponent } from './paginas/modal/modal.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -35,6 +36,7 @@ const routes: Routes = [
   {path:"material/dialogs",component:MaterialDialogsComponent},
   {path:"material/panel-expansion",component:MaterialPanelExpansionComponent},
   {path:"material/cards",component:MaterialCardsComponent},
+  {path:"modal",component:ModalComponent},
   {path:"**",component:ErrorComponent},
 ];
 

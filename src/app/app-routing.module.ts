@@ -21,6 +21,9 @@ import { ModalComponent } from './paginas/modal/modal.component';
 import { ModalFormularioComponent } from './paginas/modal-formulario/modal-formulario.component';
 import { MomentComponent } from './paginas/moment/moment.component';
 import { GraficosComponent } from './paginas/graficos/graficos.component';
+import { MapasComponent } from './paginas/mapas/mapas.component';
+import { MapasGoogleComponent } from './paginas/mapas-google/mapas-google.component';
+import { MapasGMapboxComponent } from './paginas/mapas-gmapbox/mapas-gmapbox.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -43,6 +46,9 @@ const routes: Routes = [
   {path:"modal-formulario",component:ModalFormularioComponent},
   {path:"moment",component:MomentComponent},
   {path:"graficos",component:GraficosComponent},
+  {path:"mapas",component:MapasComponent},
+  {path:"mapas-google",component:MapasGoogleComponent},
+  {path:"mapas-mapbox",component:MapasGMapboxComponent},
   {path:"**",component:ErrorComponent},
 ];
 

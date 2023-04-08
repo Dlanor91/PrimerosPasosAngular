@@ -38,6 +38,9 @@ import { ModalComponent } from './paginas/modal/modal.component';
 import { ModalFormularioComponent } from './paginas/modal-formulario/modal-formulario.component';
 import { MomentComponent } from './paginas/moment/moment.component';
 import { GraficosComponent } from './paginas/graficos/graficos.component';
+import { MapasComponent } from './paginas/mapas/mapas.component';
+import { MapasGoogleComponent } from './paginas/mapas-google/mapas-google.component';
+import { MapasGMapboxComponent } from './paginas/mapas-gmapbox/mapas-gmapbox.component';
 
 //material-angular
 import {MatButtonModule} from '@angular/material/button';
@@ -53,6 +56,7 @@ import {MatCardModule} from '@angular/material/card';
 
 //Componente de grafico
 import { GoogleChartsModule } from 'angular-google-charts';
+
 
 
 @NgModule({
@@ -83,7 +87,10 @@ import { GoogleChartsModule } from 'angular-google-charts';
     ModalComponent,
     ModalFormularioComponent,
     MomentComponent,
-    GraficosComponent
+    GraficosComponent,
+    MapasComponent,
+    MapasGoogleComponent,
+    MapasGMapboxComponent
          
        
   ],

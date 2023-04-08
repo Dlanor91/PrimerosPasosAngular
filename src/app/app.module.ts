@@ -41,6 +41,7 @@ import { GraficosComponent } from './paginas/graficos/graficos.component';
 import { MapasComponent } from './paginas/mapas/mapas.component';
 import { MapasGoogleComponent } from './paginas/mapas-google/mapas-google.component';
 import { MapasGMapboxComponent } from './paginas/mapas-gmapbox/mapas-gmapbox.component';
+import { ServiciosComponent } from './paginas/servicios/servicios.component';
 
 //material-angular
 import {MatButtonModule} from '@angular/material/button';
@@ -56,6 +57,7 @@ import {MatCardModule} from '@angular/material/card';
 
 //Componente de grafico
 import { GoogleChartsModule } from 'angular-google-charts';
+
 
 
 
@@ -90,7 +92,8 @@ import { GoogleChartsModule } from 'angular-google-charts';
     GraficosComponent,
     MapasComponent,
     MapasGoogleComponent,
-    MapasGMapboxComponent
+    MapasGMapboxComponent,
+    ServiciosComponent
          
        
   ],

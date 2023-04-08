@@ -18,30 +18,7 @@ export class MapasService {
 
 
   constructor() { 
-    this.mapbox.accessToken = environment.mapBoxToken;
+    
   }
 
-  buildMap(){
-    this.map = new mapboxgl.Map({
-      container:'map',
-      style: this.style,
-      zoom:15,
-      center: [-70.6097749, -33.5312374],
-      //pitch: 60,
-      //bearing: -60, para dar relieve
-      attributionControl:false
-    }).addControl(new mapboxgl.AttributionControl({
-      customAttribution: 'Map design by me'
-    }));
-    this.map.addControl(new mapboxgl.GeolocateControl({
-      positionOptions: {
-        enableHighAccuracy: true
-      },
-      trackUserLocation:true,
-      showUserHeading: true
-    }))
-    this.map.addControl(
-      new mapboxgl.NavigationControl(),
-    );
-  }
 }

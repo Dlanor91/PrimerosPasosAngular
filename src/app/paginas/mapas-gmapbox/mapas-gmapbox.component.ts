@@ -7,9 +7,9 @@ import { MapasService } from 'src/app/servicios/mapas.service';
   styleUrls: ['./mapas-gmapbox.component.css']
 })
 export class MapasGMapboxComponent implements OnInit{
-  constructor(private map: MapasService){}
+  constructor(){}
 
   ngOnInit(): void { 
-     this.map.buildMap(); 
+     
   }
 }

@@ -24,6 +24,7 @@ import { GraficosComponent } from './paginas/graficos/graficos.component';
 import { MapasComponent } from './paginas/mapas/mapas.component';
 import { MapasGoogleComponent } from './paginas/mapas-google/mapas-google.component';
 import { MapasGMapboxComponent } from './paginas/mapas-gmapbox/mapas-gmapbox.component';
+import { ServiciosComponent } from './paginas/servicios/servicios.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -49,6 +50,7 @@ const routes: Routes = [
   {path:"mapas",component:MapasComponent},
   {path:"mapas-google",component:MapasGoogleComponent},
   {path:"mapas-mapbox",component:MapasGMapboxComponent},
+  {path:"servicios",component:ServiciosComponent},
   {path:"**",component:ErrorComponent},
 ];
 

@@ -29,6 +29,8 @@ import { LocalstorageComponent } from './paginas/localstorage/localstorage.compo
 import { Localstorage2Component } from './paginas/localstorage2/localstorage2.component';
 import { SessionStorageComponent } from './paginas/session-storage/session-storage.component';
 import { SessionStorage2Component } from './paginas/session-storage2/session-storage2.component';
+import { CookieComponent } from './paginas/cookie/cookie.component';
+import { Cookie2Component } from './paginas/cookie2/cookie2.component';
 
 
 const routes: Routes = [
@@ -60,6 +62,8 @@ const routes: Routes = [
   {path:"localstorage2",component:Localstorage2Component},  
   {path:"sessionstorage",component:SessionStorageComponent},
   {path:"sessionstorage2",component:SessionStorage2Component},
+  {path:"cookie",component:CookieComponent},
+  {path:"cookie2",component:Cookie2Component},
   {path:"**",component:ErrorComponent},
 ];
 

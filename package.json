@@ -28,6 +28,7 @@
     "env": "^0.0.2",
     "mapbox-gl": "^2.13.0",
     "moment": "^2.29.4",
+    "ngx-cookie-service": "^15.0.0",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.7.3",
     "tslib": "^2.3.0",

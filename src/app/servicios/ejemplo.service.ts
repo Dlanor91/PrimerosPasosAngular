@@ -8,7 +8,7 @@ export class EjemploService {
   constructor() { }
 
   getDato(){
-    return "hola desdde servicio"
+    return "hola desde servicio"
   }
 
   otroMetodo(nombre:string,apellido:string){

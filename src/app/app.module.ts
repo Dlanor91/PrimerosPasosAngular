@@ -42,6 +42,8 @@ import { MapasComponent } from './paginas/mapas/mapas.component';
 import { MapasGoogleComponent } from './paginas/mapas-google/mapas-google.component';
 import { MapasGMapboxComponent } from './paginas/mapas-gmapbox/mapas-gmapbox.component';
 import { ServiciosComponent } from './paginas/servicios/servicios.component';
+import { LocalstorageComponent } from './paginas/localstorage/localstorage.component';
+import { Localstorage2Component } from './paginas/localstorage2/localstorage2.component';
 
 //material-angular
 import {MatButtonModule} from '@angular/material/button';
@@ -57,9 +59,7 @@ import {MatCardModule} from '@angular/material/card';
 
 //Componente de grafico
 import { GoogleChartsModule } from 'angular-google-charts';
-
-
-
+import { SessionStorageComponent } from './paginas/session-storage/session-storage.component';
 
 @NgModule({
   declarations: [
@@ -93,9 +93,10 @@ import { GoogleChartsModule } from 'angular-google-charts';
     MapasComponent,
     MapasGoogleComponent,
     MapasGMapboxComponent,
-    ServiciosComponent
-         
-       
+    ServiciosComponent,
+    LocalstorageComponent,
+    Localstorage2Component,    
+    SessionStorageComponent 
   ],
   imports: [
     BrowserModule,

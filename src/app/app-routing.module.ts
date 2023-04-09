@@ -27,6 +27,9 @@ import { MapasGMapboxComponent } from './paginas/mapas-gmapbox/mapas-gmapbox.com
 import { ServiciosComponent } from './paginas/servicios/servicios.component';
 import { LocalstorageComponent } from './paginas/localstorage/localstorage.component';
 import { Localstorage2Component } from './paginas/localstorage2/localstorage2.component';
+import { SessionStorageComponent } from './paginas/session-storage/session-storage.component';
+import { SessionStorage2Component } from './paginas/session-storage2/session-storage2.component';
+
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -55,6 +58,8 @@ const routes: Routes = [
   {path:"servicios",component:ServiciosComponent},
   {path:"localstorage",component:LocalstorageComponent},
   {path:"localstorage2",component:Localstorage2Component},  
+  {path:"sessionstorage",component:SessionStorageComponent},
+  {path:"sessionstorage2",component:SessionStorage2Component},
   {path:"**",component:ErrorComponent},
 ];
 

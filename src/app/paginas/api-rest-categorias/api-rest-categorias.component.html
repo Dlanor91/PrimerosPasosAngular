@@ -1,0 +1,27 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/api-rest">Api Rest</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Categorias</li>
+    </ol>
+</nav>
+<h3>Categorias</h3>
+<p>
+    <a routerLink="/api/categorias/add" class="btn btn-success"><i class="fas fa-plus"> Add</i></a>
+</p>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-stried">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dato of datos">
+                <td>{{dato.id}}</td>
+                <td>{{dato.nombre}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

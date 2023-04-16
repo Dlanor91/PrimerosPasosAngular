@@ -48,6 +48,7 @@ import { SessionStorageComponent } from './paginas/session-storage/session-stora
 import { SessionStorage2Component } from './paginas/session-storage2/session-storage2.component';
 import { CookieComponent } from './paginas/cookie/cookie.component';
 import { Cookie2Component } from './paginas/cookie2/cookie2.component';
+import { ApiRestComponent } from './paginas/api-rest/api-rest.component';
 
 //material-angular
 import {MatButtonModule} from '@angular/material/button';
@@ -60,12 +61,17 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule } from '@angular/material/core';
 import {MatCardModule} from '@angular/material/card';
+import { PrimerosPasosComponent } from './paginas/primeros-pasos/primeros-pasos.component';
+import { ApiRestCategoriasComponent } from './paginas/api-rest-categorias/api-rest-categorias.component';
 
 //Componente de grafico
 import { GoogleChartsModule } from 'angular-google-charts';
 
 //Componente de Cookie
 import { CookieService } from 'ngx-cookie-service';
+
+//Http Client Module
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -109,13 +115,14 @@ import { CookieService } from 'ngx-cookie-service';
     SessionStorageComponent, 
     SessionStorage2Component, 
     CookieComponent, 
-    Cookie2Component
+    Cookie2Component, ApiRestComponent, PrimerosPasosComponent, ApiRestCategoriasComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
     BrowserAnimationsModule,

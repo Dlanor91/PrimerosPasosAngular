@@ -31,6 +31,9 @@ import { SessionStorageComponent } from './paginas/session-storage/session-stora
 import { SessionStorage2Component } from './paginas/session-storage2/session-storage2.component';
 import { CookieComponent } from './paginas/cookie/cookie.component';
 import { Cookie2Component } from './paginas/cookie2/cookie2.component';
+import { ApiRestComponent } from './paginas/api-rest/api-rest.component';
+import { PrimerosPasosComponent } from './paginas/primeros-pasos/primeros-pasos.component';
+import { ApiRestCategoriasComponent } from './paginas/api-rest-categorias/api-rest-categorias.component';
 
 
 const routes: Routes = [
@@ -64,6 +67,9 @@ const routes: Routes = [
   {path:"sessionstorage2",component:SessionStorage2Component},
   {path:"cookie",component:CookieComponent},
   {path:"cookie2",component:Cookie2Component},
+  {path:"primeros-pasos",component:PrimerosPasosComponent},
+  {path:"api-rest",component:ApiRestComponent},
+  {path:"api/categorias",component:ApiRestCategoriasComponent},
   {path:"**",component:ErrorComponent},
 ];
 

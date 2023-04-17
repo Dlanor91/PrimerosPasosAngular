@@ -25,6 +25,8 @@ export class ApiRestService {
   {   
     this.api=environment.api;
   }
+
+  //Categorias
   getCategorias():Observable<any>
   {
     return this.http.get(`${this.api}categorias`, {headers: this.cabecero});
@@ -43,5 +45,16 @@ export class ApiRestService {
   editCategorias(modelo:CategoriasRequest, id:any):Observable<any>
   {
     return this.http.put(`${this.api}categorias/${id}`,modelo,{headers: this.cabecero});
+  }
+
+  deleteCategorias(id:any):Observable<any>
+  {
+    return this.http.delete(`${this.api}categorias/${id}`, {headers: this.cabecero});
+  }
+
+  //Productos
+  getProductos(page:any):Observable<any>
+  {
+    return this.http.get(`${this.api}productos?page=${page}`, {headers: this.cabecero});
   }
 }

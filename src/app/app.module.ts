@@ -74,6 +74,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiRestCategoriasAddComponent } from './paginas/api-rest-categorias-add/api-rest-categorias-add.component';
 import { ApiRestCategoriasEditComponent } from './paginas/api-rest-categorias-edit/api-rest-categorias-edit.component';
+import { ApiRestProductosComponent } from './paginas/api-rest-productos/api-rest-productos.component';
 
 @NgModule({
   declarations: [
@@ -117,7 +118,7 @@ import { ApiRestCategoriasEditComponent } from './paginas/api-rest-categorias-ed
     SessionStorageComponent, 
     SessionStorage2Component, 
     CookieComponent, 
-    Cookie2Component, ApiRestComponent, PrimerosPasosComponent, ApiRestCategoriasComponent, ApiRestCategoriasAddComponent, ApiRestCategoriasEditComponent
+    Cookie2Component, ApiRestComponent, PrimerosPasosComponent, ApiRestCategoriasComponent, ApiRestCategoriasAddComponent, ApiRestCategoriasEditComponent, ApiRestProductosComponent
 
   ],
   imports: [

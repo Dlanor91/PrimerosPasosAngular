@@ -1,10 +1,11 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a routerLink="/api-rest">Api Rest</a></li>
+        <li class="breadcrumb-item"><a routerLink="/api-rest">API Rest</a></li>
         <li class="breadcrumb-item active" aria-current="page">Categorias</li>
+        <li class="breadcrumb-item"><a routerLink="/api/productos">Productos</a></li>
     </ol>
 </nav>
-<h3>Categorias</h3>
+<h3>Categorias({{largo}})</h3>
 <p>
     <a routerLink="/api/categorias/add" class="btn btn-success"><i class="fas fa-plus"> Add</i></a>
 </p>
@@ -26,7 +27,7 @@
                         <i class="fas fa-edit"></i>
                     </a>
                     &nbsp;&nbsp;
-                    <a class="text text-primary">
+                    <a class="text text-primary" (click)="eliminar(dato.id)">
                         <i class="fas fa-trash"></i>
                     </a>
                 </td>

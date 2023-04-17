@@ -21,6 +21,15 @@
             <tr *ngFor="let dato of datos">
                 <td>{{dato.id}}</td>
                 <td>{{dato.nombre}}</td>
+                <td>
+                    <a [routerLink]="'/api/categorias/edit/'+dato.id">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    &nbsp;&nbsp;
+                    <a class="text text-primary">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
             </tr>
         </tbody>
     </table>

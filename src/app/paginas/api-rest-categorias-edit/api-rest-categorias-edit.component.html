@@ -1,0 +1,33 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/api-rest">API Rest</a></li>
+        <li class="breadcrumb-item"><a routerLink="/api/categorias">Categorias</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Editar: {{datos.nombre}}</li>
+    </ol>
+</nav>
+<h3>Agregar</h3>
+<div class="col-8">
+    <form [formGroup]="formulario" #formDir="ngForm">
+        <div [hidden]="formDir.submitted">
+            <div class="cross-validation"
+                [class.cross-validation-error]="formulario.invalid && (formulario.touched || formulario.dirty)">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" formControlName="nombre" required />
+                    <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert alert-danger">
+                        <div *ngIf="nombre.errors?.['required']">
+                            El campo nombre es obligatorio
+                        </div>
+                        <div *ngIf="nombre.errors?.['minlength']">
+                            El campo debe tener al menos 4 carateres
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <button type="submit" class="btn btn-primary" (click)="enviar()" [disabled]="formulario.invalid">Enviar</button>
+        &nbsp;&nbsp;
+        <button type="button" class="btn btn-primary" (click)="formDir.resetForm({})">Resetear</button>
+    </form>
+</div>

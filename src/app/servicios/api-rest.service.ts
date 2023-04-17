@@ -30,8 +30,18 @@ export class ApiRestService {
     return this.http.get(`${this.api}categorias`, {headers: this.cabecero});
   }
 
+  getCategoriasPorId(id:any):Observable<any>
+  {
+    return this.http.get(`${this.api}categorias/${id}`, {headers: this.cabecero});
+  }
+
   addCategorias(modelo:CategoriasRequest):Observable<any>
   {
     return this.http.post(`${this.api}categorias`,modelo,{headers: this.cabecero});
+  }
+
+  editCategorias(modelo:CategoriasRequest, id:any):Observable<any>
+  {
+    return this.http.put(`${this.api}categorias/${id}`,modelo,{headers: this.cabecero});
   }
 }

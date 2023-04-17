@@ -35,6 +35,7 @@ import { ApiRestComponent } from './paginas/api-rest/api-rest.component';
 import { PrimerosPasosComponent } from './paginas/primeros-pasos/primeros-pasos.component';
 import { ApiRestCategoriasComponent } from './paginas/api-rest-categorias/api-rest-categorias.component';
 import { ApiRestCategoriasAddComponent } from './paginas/api-rest-categorias-add/api-rest-categorias-add.component';
+import { ApiRestCategoriasEditComponent } from './paginas/api-rest-categorias-edit/api-rest-categorias-edit.component';
 
 
 const routes: Routes = [
@@ -72,6 +73,7 @@ const routes: Routes = [
   {path:"api-rest",component:ApiRestComponent},
   {path:"api/categorias",component:ApiRestCategoriasComponent},
   {path:"api/categorias/add",component:ApiRestCategoriasAddComponent},
+  {path:"api/categorias/edit/:id",component:ApiRestCategoriasEditComponent},
   {path:"**",component:ErrorComponent},
 ];
 

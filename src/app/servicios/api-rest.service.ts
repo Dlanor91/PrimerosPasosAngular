@@ -9,6 +9,9 @@ import { HttpClient} from '@angular/common/http';
 //e3ero modulo de observable para manejar multiples respuestas
 import { Observable } from 'rxjs';
 
+//interfaz para add
+import { CategoriasRequest } from '../Interfaces/categorias_request';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -25,5 +28,10 @@ export class ApiRestService {
   getCategorias():Observable<any>
   {
     return this.http.get(`${this.api}categorias`, {headers: this.cabecero});
+  }
+
+  addCategorias(modelo:CategoriasRequest):Observable<any>
+  {
+    return this.http.post(`${this.api}categorias`,modelo,{headers: this.cabecero});
   }
 }

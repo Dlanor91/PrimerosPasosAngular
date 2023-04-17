@@ -34,6 +34,7 @@ import { Cookie2Component } from './paginas/cookie2/cookie2.component';
 import { ApiRestComponent } from './paginas/api-rest/api-rest.component';
 import { PrimerosPasosComponent } from './paginas/primeros-pasos/primeros-pasos.component';
 import { ApiRestCategoriasComponent } from './paginas/api-rest-categorias/api-rest-categorias.component';
+import { ApiRestCategoriasAddComponent } from './paginas/api-rest-categorias-add/api-rest-categorias-add.component';
 
 
 const routes: Routes = [
@@ -70,6 +71,7 @@ const routes: Routes = [
   {path:"primeros-pasos",component:PrimerosPasosComponent},
   {path:"api-rest",component:ApiRestComponent},
   {path:"api/categorias",component:ApiRestCategoriasComponent},
+  {path:"api/categorias/add",component:ApiRestCategoriasAddComponent},
   {path:"**",component:ErrorComponent},
 ];
 

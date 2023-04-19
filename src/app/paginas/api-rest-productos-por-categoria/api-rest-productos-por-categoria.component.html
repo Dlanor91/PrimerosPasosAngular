@@ -1,0 +1,73 @@
+<p>api-rest-productos-por-categoria works!</p>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/api-rest">API Rest</a></li>
+        <li class="breadcrumb-item"><a routerLink="/api/categorias">Categorias</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/api/productos']" [queryParams]="{page:'1'}">Productos</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Productos categoria: {{categoria.nombre}}</li>
+    </ol>
+</nav>
+<h3>Productos ({{total}} registros en total)({{por_pagina}} en esta pagina)</h3>
+<p>
+    <a routerLink="/api/productos/add" class="btn btn-success"><i class="fas fa-plus"> Add</i></a>
+</p>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-stried">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Categoria</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Fotos</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dato of datos">
+                <td>{{dato.id}}</td>
+                <td>
+                    <a [routerLink]="'/api/productos-categoria/'+dato.categoria_slug">{{dato.categoria}}</a>
+                </td>
+                <td>{{dato.nombre}}</td>
+                <td>{{dato.descripcion|slice:0:50}}.....</td>
+                <td>{{dato.precio|formateaNumeros}}</td>
+                <td>{{dato.stock}}</td>
+                <td style="text-align: center;">
+                    <a [routerLink]="'/api/productos/fotos'+dato.id" title="Fotos Producto {{dato.nombre}}">
+                        <i class="fas fa-camera"></i>
+                    </a>
+                </td>
+                <td>
+                    <a [routerLink]="'/api/categorias/edit/'+dato.id">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    &nbsp;&nbsp;
+                    <a class="text text-primary" (click)="eliminar(dato.id)">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="/api/productos-categoria/{{slug}}?page=1">Primera</a></li>
+            <li *ngIf="page>1" class="page-item"><a class="page-link"
+                    href="/api/productos-categoria/{{slug}}?page={{page-1}}">Anterior</a>
+            </li>
+            <ng-container *ngFor="let item of paginas; let i=index">
+                <li *ngIf="i!=0" class="page-item">
+                    <a class="page-link" href=" /api/productos-categoria/{{slug}}?page={{item}}">{{item}}</a>
+                </li>
+            </ng-container>
+            <li *ngIf="page<links" class="page-item"><a class="page-link"
+                    href="/api/productos-categoria/{{slug}}?page={{page+1}}">Siguiente</a>
+            </li>
+            <li class="page-item"><a class="page-link"
+                    href="/api/productos-categoria/{{slug}}?page={{links}}">Ultima</a></li>
+        </ul>
+    </nav>
+</div>

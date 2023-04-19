@@ -52,9 +52,21 @@ export class ApiRestService {
     return this.http.delete(`${this.api}categorias/${id}`, {headers: this.cabecero});
   }
 
+  getCategoriasPorSlug(slug:any):Observable<any>
+  {
+    return this.http.get(`${this.api}categorias-slug/${slug}`, {headers: this.cabecero});
+  }
+
   //Productos
   getProductos(page:any):Observable<any>
   {
     return this.http.get(`${this.api}productos?page=${page}`, {headers: this.cabecero});
   }
+
+  getProductosCategoria(slug:any, page:any):Observable<any>
+  {
+    return this.http.get(`${this.api}productos-buscar/${slug}?page=${page}`, {headers: this.cabecero});
+  }
+  
+
 }

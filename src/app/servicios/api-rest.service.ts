@@ -68,5 +68,9 @@ export class ApiRestService {
     return this.http.get(`${this.api}productos-buscar/${slug}?page=${page}`, {headers: this.cabecero});
   }
   
+  getProductosBuscar(page:any, search:any):Observable<any>
+  {
+    return this.http.get(`${this.api}productos-buscar?page=${page}&search=${search}`, {headers: this.cabecero});
+  }
 
 }

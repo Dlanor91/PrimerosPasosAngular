@@ -67,6 +67,7 @@ import { ApiRestCategoriasAddComponent } from './paginas/api-rest-categorias-add
 import { ApiRestCategoriasEditComponent } from './paginas/api-rest-categorias-edit/api-rest-categorias-edit.component';
 import { ApiRestProductosComponent } from './paginas/api-rest-productos/api-rest-productos.component';
 import { ApiRestProductosPorCategoriaComponent } from './paginas/api-rest-productos-por-categoria/api-rest-productos-por-categoria.component';
+import { ApiRestProductosBuscadorComponent } from './paginas/api-rest-productos-buscador/api-rest-productos-buscador.component';
 
 //Componente de grafico
 import { GoogleChartsModule } from 'angular-google-charts';
@@ -119,7 +120,7 @@ import { HttpClientModule } from '@angular/common/http';
     SessionStorageComponent, 
     SessionStorage2Component, 
     CookieComponent, 
-    Cookie2Component, ApiRestComponent, PrimerosPasosComponent, ApiRestCategoriasComponent, ApiRestCategoriasAddComponent, ApiRestCategoriasEditComponent, ApiRestProductosComponent, ApiRestProductosPorCategoriaComponent
+    Cookie2Component, ApiRestComponent, PrimerosPasosComponent, ApiRestCategoriasComponent, ApiRestCategoriasAddComponent, ApiRestCategoriasEditComponent, ApiRestProductosComponent, ApiRestProductosPorCategoriaComponent, ApiRestProductosBuscadorComponent
 
   ],
   imports: [

@@ -38,6 +38,7 @@ import { ApiRestCategoriasAddComponent } from './paginas/api-rest-categorias-add
 import { ApiRestCategoriasEditComponent } from './paginas/api-rest-categorias-edit/api-rest-categorias-edit.component';
 import { ApiRestProductosComponent } from './paginas/api-rest-productos/api-rest-productos.component';
 import { ApiRestProductosPorCategoriaComponent } from './paginas/api-rest-productos-por-categoria/api-rest-productos-por-categoria.component';
+import { ApiRestProductosBuscadorComponent } from './paginas/api-rest-productos-buscador/api-rest-productos-buscador.component';
 
 
 const routes: Routes = [
@@ -78,6 +79,7 @@ const routes: Routes = [
   {path:"api/categorias/edit/:id",component:ApiRestCategoriasEditComponent},
   {path:"api/productos",component:ApiRestProductosComponent},
   {path:"api/productos-categoria/:slug",component:ApiRestProductosPorCategoriaComponent},
+  {path:"api/productos-buscar",component:ApiRestProductosBuscadorComponent},
   {path:"**",component:ErrorComponent},
 ];
 

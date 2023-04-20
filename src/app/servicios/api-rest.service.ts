@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 
 //interfaz para add
 import { CategoriasRequest } from '../Interfaces/categorias_request';
+import { ProductosRequest } from '../Interfaces/productos_request';
 
 @Injectable({
   providedIn: 'root'
@@ -71,6 +72,11 @@ export class ApiRestService {
   getProductosBuscar(page:any, search:any):Observable<any>
   {
     return this.http.get(`${this.api}productos-buscar?page=${page}&search=${search}`, {headers: this.cabecero});
+  }
+
+  addProductos(modelo:ProductosRequest):Observable<any>
+  {
+    return this.http.post(`${this.api}productos`,modelo, {headers: this.cabecero});
   }
 
 }

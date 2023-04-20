@@ -79,4 +79,9 @@ export class ApiRestService {
     return this.http.post(`${this.api}productos`,modelo, {headers: this.cabecero});
   }
 
+  deleteProductos(id:any):Observable<any>
+  {
+    return this.http.delete(`${this.api}productos/${id}`, {headers: this.cabecero});
+  }
+
 }

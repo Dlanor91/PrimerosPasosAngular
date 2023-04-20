@@ -54,6 +54,44 @@ export class ApiRestProductosComponent implements OnInit{
 
   eliminar(id:any){
     
+    swal.fire({
+      title: 'Realmente desea eliminar este registro?',      
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'No',
+      confirmButtonText: 'SI'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.servicio.deleteProductos(id).subscribe({
+          next: data =>{
+            if(data.estado == 'ok'){
+              swal.fire({
+                icon:'success',
+                timer:3000,
+                title:'OK',
+                text:'Se elimino el registro correctamente.'
+              });              
+            }else{
+              swal.fire({
+                icon:'error',
+                timer:3000,
+                title:'Ups!',
+                text:'No es posible eliminar el registro.'
+              });
+            }
+            this.router.navigate(['api/productos']).then(()=>{
+              window.location.reload();
+            });
+          },
+          error:error=>
+          {
+            console.error('ERROR',error);
+          }
+        })
+      }
+    })
   }
 
   buscar(){

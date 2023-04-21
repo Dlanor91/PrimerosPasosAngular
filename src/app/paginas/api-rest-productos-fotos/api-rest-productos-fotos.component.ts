@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FotosResponse } from 'src/app/Interfaces/fotos_response';
 import { ApiRestService } from 'src/app/servicios/api-rest.service';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-api-rest-productos-fotos',
@@ -13,7 +14,7 @@ export class ApiRestProductosFotosComponent implements OnInit{
   datos : any={};
   fotos:Array<FotosResponse>
 
-  constructor(private servicio:ApiRestService, private route : ActivatedRoute){}
+  constructor(private servicio:ApiRestService,private router:Router, private route : ActivatedRoute){}
 
   ngOnInit(): void {
     let params : any = this.route.snapshot.params;
@@ -27,8 +28,10 @@ export class ApiRestProductosFotosComponent implements OnInit{
       next:data =>{
         this.datos = data;
       },
-      error:error=>{
-        console.error('Error',error)
+      error:error=>{        
+        this.router.navigate(['/error']).then(()=> {
+          window.location.reload();
+         });
       }
     });
   }

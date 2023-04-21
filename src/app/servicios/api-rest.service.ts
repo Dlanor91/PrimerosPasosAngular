@@ -94,4 +94,9 @@ export class ApiRestService {
     return this.http.delete(`${this.api}productos/${id}`, {headers: this.cabecero});
   }
 
+  getProductosFotos(id:any):Observable<any>
+  {
+    return this.http.get(`${this.api}productos-fotos/${id}`, {headers: this.cabecero});
+  }
+
 }

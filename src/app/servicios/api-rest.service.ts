@@ -22,6 +22,11 @@ export class ApiRestService {
     'content-type': 'application/json',
     'Authorization':'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzYsImlhdCI6MTY4MTU4NzM5NSwiZXhwIjoxNjg0MTc5Mzk1fQ.CLchFKrKUSZw1cm8GdWfYVvCUcYSWcJYXnrrdD-uDmM'
   };
+
+  //para upload sin content-type
+  cabecero_upload = {    
+    'Authorization':'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzYsImlhdCI6MTY4MTU4NzM5NSwiZXhwIjoxNjg0MTc5Mzk1fQ.CLchFKrKUSZw1cm8GdWfYVvCUcYSWcJYXnrrdD-uDmM'
+  };
   constructor(private http: HttpClient) 
   {   
     this.api=environment.api;
@@ -97,6 +102,22 @@ export class ApiRestService {
   getProductosFotos(id:any):Observable<any>
   {
     return this.http.get(`${this.api}productos-fotos/${id}`, {headers: this.cabecero});
+  }
+
+  addProductosFotos(productos_id:any,imagen:any):Observable<any>
+  {
+    //variable para archivos
+    let formData = new FormData();
+
+    //parametros
+    formData.append('imagen',imagen);
+    formData.append('productos_id',productos_id)
+
+    return this.http.post(`${this.api}productos-fotos`,formData, {headers: this.cabecero_upload});
+  }
+
+  deleteProductosFotos(id:any):Observable<any>{
+    return this.http.delete(`${this.api}productos-fotos/${id}`,{headers: this.cabecero});
   }
 
 }

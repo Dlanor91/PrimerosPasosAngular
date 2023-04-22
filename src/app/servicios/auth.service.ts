@@ -16,19 +16,19 @@ import { LoginRequest } from '../Interfaces/login_request';
   providedIn: 'root'
 })
 export class AuthService {
-  api:string;
-
-  constructor(private http:HttpClient) { 
+  api: string;
+  constructor(private http: HttpClient) 
+  {
     this.api = environment.api;
   }
 
   //aqui no hay authenticacion
-  login(modelo: LoginRequest):Observable<any>{
-    return this.http.post('${this.api}login',modelo)
+  login(modelo: LoginRequest): Observable<any> {
+    return this.http.post(`${this.api}login`, modelo);
   }
-
-  registro(modelo: RegistroRequest):Observable<any>{
-    return this.http.post('${this.api}registro',modelo)
+  registro(modelo: RegistroRequest): Observable<any>
+  {
+    return this.http.post(`${this.api}registro`, modelo);
   }
   
 }

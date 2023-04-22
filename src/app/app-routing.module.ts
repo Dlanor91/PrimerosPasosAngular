@@ -44,6 +44,7 @@ import { ApiRestProductosEditComponent } from './paginas/api-rest-productos-edit
 import { ApiRestProductosFotosComponent } from './paginas/api-rest-productos-fotos/api-rest-productos-fotos.component';
 import { AccesoLoginComponent } from './paginas/acceso-login/acceso-login.component';
 import { AccesoRegistroComponent } from './paginas/acceso-registro/acceso-registro.component';
+import { AccesoRestringidoComponent } from './paginas/acceso-restringido/acceso-restringido.component';
 
 
 const routes: Routes = [
@@ -90,7 +91,7 @@ const routes: Routes = [
   {path:"api/productos/fotos/:id",component:ApiRestProductosFotosComponent},
   {path:"login",component:AccesoLoginComponent},
   {path:"registro",component:AccesoRegistroComponent},
-  {path:"restringido",component:AccesoRegistroComponent},
+  {path:"restringido",component:AccesoRestringidoComponent},
   {path:"**",component:ErrorComponent},
 ];
 

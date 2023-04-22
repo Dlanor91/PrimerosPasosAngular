@@ -60,8 +60,8 @@ export class AccesoLoginComponent implements OnInit{
           if(data.estado=='ok')
           {
             //aqui guardo en el cookie
-            this.cookieService.set('cesar_login', data.token, 1);
-            this.cookieService.set('cesar_nombre', data.nombre, 1);
+            this.cookieService.set('var_login', data.token, 1);
+            this.cookieService.set('var_nombre', data.nombre, 1);
             window.location.href="/restringido";
           }else
           {

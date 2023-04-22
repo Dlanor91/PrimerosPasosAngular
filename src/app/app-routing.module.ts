@@ -45,7 +45,7 @@ import { ApiRestProductosFotosComponent } from './paginas/api-rest-productos-fot
 import { AccesoLoginComponent } from './paginas/acceso-login/acceso-login.component';
 import { AccesoRegistroComponent } from './paginas/acceso-registro/acceso-registro.component';
 import { AccesoRestringidoComponent } from './paginas/acceso-restringido/acceso-restringido.component';
-
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -91,7 +91,8 @@ const routes: Routes = [
   {path:"api/productos/fotos/:id",component:ApiRestProductosFotosComponent},
   {path:"login",component:AccesoLoginComponent},
   {path:"registro",component:AccesoRegistroComponent},
-  {path:"restringido",component:AccesoRestringidoComponent},
+  //aqui se restringe esta clase por ejemplo  
+  {path:"restringido",canActivate: [AuthGuard],component:AccesoRestringidoComponent},
   {path:"**",component:ErrorComponent},
 ];
 

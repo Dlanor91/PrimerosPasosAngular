@@ -36,9 +36,10 @@
             <a class="p-2 link-secondary" routerLink="/cookie">Cookie</a>
             <a class="p-2 link-secondary" routerLink="/ciclo-vida" routerLinkActive="enlaces">Ciclo de Vida</a>
             <a class="p-2 link-secondary" routerLink="/comunicacion" routerLinkActive="enlaces">Comunicacion</a>
-            <a class="p-2 link-secondary" routerLink="/login">Login</a>
-            <a class="p-2 link-secondary" routerLink="/registro">Registro</a>
-            <a class="p-2 link-secondary" routerLink="/restringido">Restringido</a>
+
+            <a *ngIf="boleano==false" class="p-2 link-secondary" routerLink="/login">Login</a>
+            <a *ngIf="boleano==false" class="p-2 link-secondary" routerLink="/registro">Registro</a>
+            <a *ngIf="boleano" class="p-2 link-secondary" routerLink="/restringido">Restringido</a>
         </nav>
     </div>
 </div>

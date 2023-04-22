@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 //1ero importar el environment
 import { environment } from 'src/environments/environment';
 
-//2do el httpcliente y el httpheaders
+//2do el httpcliente
 import { HttpClient} from '@angular/common/http';
 
 //e3ero modulo de observable para manejar multiples respuestas

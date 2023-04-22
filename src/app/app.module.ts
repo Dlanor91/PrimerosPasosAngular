@@ -71,6 +71,9 @@ import { ApiRestProductosBuscadorComponent } from './paginas/api-rest-productos-
 import { ProductosAddComponent } from './paginas/productos-add/productos-add.component';
 import { ApiRestProductosEditComponent } from './paginas/api-rest-productos-edit/api-rest-productos-edit.component';
 import { ApiRestProductosFotosComponent } from './paginas/api-rest-productos-fotos/api-rest-productos-fotos.component';
+import { AccesoLoginComponent } from './paginas/acceso-login/acceso-login.component';
+import { AccesoRegistroComponent } from './paginas/acceso-registro/acceso-registro.component';
+import { AccesoRestringidoComponent } from './paginas/acceso-restringido/acceso-restringido.component';
 
 //Componente de grafico
 import { GoogleChartsModule } from 'angular-google-charts';
@@ -80,7 +83,6 @@ import { CookieService } from 'ngx-cookie-service';
 
 //Http Client Module
 import { HttpClientModule } from '@angular/common/http';
-
 
 @NgModule({
   declarations: [
@@ -124,7 +126,7 @@ import { HttpClientModule } from '@angular/common/http';
     SessionStorageComponent, 
     SessionStorage2Component, 
     CookieComponent, 
-    Cookie2Component, ApiRestComponent, PrimerosPasosComponent, ApiRestCategoriasComponent, ApiRestCategoriasAddComponent, ApiRestCategoriasEditComponent, ApiRestProductosComponent, ApiRestProductosPorCategoriaComponent, ApiRestProductosBuscadorComponent, ProductosAddComponent, ApiRestProductosEditComponent, ApiRestProductosFotosComponent
+    Cookie2Component, ApiRestComponent, PrimerosPasosComponent, ApiRestCategoriasComponent, ApiRestCategoriasAddComponent, ApiRestCategoriasEditComponent, ApiRestProductosComponent, ApiRestProductosPorCategoriaComponent, ApiRestProductosBuscadorComponent, ProductosAddComponent, ApiRestProductosEditComponent, ApiRestProductosFotosComponent, AccesoLoginComponent, AccesoRegistroComponent, AccesoRestringidoComponent
 
   ],
   imports: [

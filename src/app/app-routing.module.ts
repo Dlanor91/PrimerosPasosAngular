@@ -42,6 +42,8 @@ import { ApiRestProductosBuscadorComponent } from './paginas/api-rest-productos-
 import { ProductosAddComponent } from './paginas/productos-add/productos-add.component';
 import { ApiRestProductosEditComponent } from './paginas/api-rest-productos-edit/api-rest-productos-edit.component';
 import { ApiRestProductosFotosComponent } from './paginas/api-rest-productos-fotos/api-rest-productos-fotos.component';
+import { AccesoLoginComponent } from './paginas/acceso-login/acceso-login.component';
+import { AccesoRegistroComponent } from './paginas/acceso-registro/acceso-registro.component';
 
 
 const routes: Routes = [
@@ -86,6 +88,9 @@ const routes: Routes = [
   {path:"api/productos/add",component:ProductosAddComponent},
   {path:"api/productos/editar/:id",component:ApiRestProductosEditComponent},
   {path:"api/productos/fotos/:id",component:ApiRestProductosFotosComponent},
+  {path:"login",component:AccesoLoginComponent},
+  {path:"registro",component:AccesoRegistroComponent},
+  {path:"restringido",component:AccesoRegistroComponent},
   {path:"**",component:ErrorComponent},
 ];
 

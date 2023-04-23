@@ -1,0 +1,8 @@
+<h1>Mercado pago respuesta</h1>
+<div *ngIf="estado=='ok'" class="alert alert-success">
+    La transacción {{preference_id}} fué realizada de manera exitosa, nos pondremos en contacto para el envío del
+    producto
+</div>
+<div *ngIf="estado=='error'" class="alert alert-danger">
+    La transacción {{preference_id}} ya está caducada
+</div>

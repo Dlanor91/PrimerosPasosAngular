@@ -84,6 +84,12 @@ import { CookieService } from 'ngx-cookie-service';
 //Http Client Module
 import { HttpClientModule } from '@angular/common/http';
 
+//MercadoPago
+import { MercadopagoComponent } from './paginas/mercadopago/mercadopago.component';
+import { MercadopagoErrorComponent } from './paginas/mercadopago-error/mercadopago-error.component';
+import { MercadopagoPendienteComponent } from './paginas/mercadopago-pendiente/mercadopago-pendiente.component';
+import { MercadopagoRespuestaComponent } from './paginas/mercadopago-respuesta/mercadopago-respuesta.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -126,7 +132,7 @@ import { HttpClientModule } from '@angular/common/http';
     SessionStorageComponent, 
     SessionStorage2Component, 
     CookieComponent, 
-    Cookie2Component, ApiRestComponent, PrimerosPasosComponent, ApiRestCategoriasComponent, ApiRestCategoriasAddComponent, ApiRestCategoriasEditComponent, ApiRestProductosComponent, ApiRestProductosPorCategoriaComponent, ApiRestProductosBuscadorComponent, ProductosAddComponent, ApiRestProductosEditComponent, ApiRestProductosFotosComponent, AccesoLoginComponent, AccesoRegistroComponent, AccesoRestringidoComponent
+    Cookie2Component, ApiRestComponent, PrimerosPasosComponent, ApiRestCategoriasComponent, ApiRestCategoriasAddComponent, ApiRestCategoriasEditComponent, ApiRestProductosComponent, ApiRestProductosPorCategoriaComponent, ApiRestProductosBuscadorComponent, ProductosAddComponent, ApiRestProductosEditComponent, ApiRestProductosFotosComponent, AccesoLoginComponent, AccesoRegistroComponent, AccesoRestringidoComponent, MercadopagoComponent, MercadopagoErrorComponent, MercadopagoPendienteComponent, MercadopagoRespuestaComponent
 
   ],
   imports: [

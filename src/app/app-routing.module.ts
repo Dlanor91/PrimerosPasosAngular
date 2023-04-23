@@ -47,6 +47,10 @@ import { AccesoRegistroComponent } from './paginas/acceso-registro/acceso-regist
 import { AccesoRestringidoComponent } from './paginas/acceso-restringido/acceso-restringido.component';
 import { AuthGuard } from './guard/auth.guard';
 import { AuthLoginGuard } from './guard/auth-login.guard';
+import { MercadopagoComponent } from './paginas/mercadopago/mercadopago.component';
+import { MercadopagoRespuestaComponent } from './paginas/mercadopago-respuesta/mercadopago-respuesta.component';
+import { MercadopagoErrorComponent } from './paginas/mercadopago-error/mercadopago-error.component';
+import { MercadopagoPendienteComponent } from './paginas/mercadopago-pendiente/mercadopago-pendiente.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -94,6 +98,11 @@ const routes: Routes = [
   {path:"login",canActivate: [AuthLoginGuard],component:AccesoLoginComponent},
   {path:"registro",canActivate: [AuthLoginGuard],component:AccesoRegistroComponent},   
   {path:"restringido",canActivate: [AuthGuard],component:AccesoRestringidoComponent},
+  //mercadopago
+  {path:"mercado-pago",component:MercadopagoComponent},
+  {path:"mercado-pago-respuesta",component:MercadopagoRespuestaComponent},
+  {path:"mercado-pago-error",component:MercadopagoErrorComponent},
+  {path:"mercado-pago-pendiente",component:MercadopagoPendienteComponent},
   {path:"**",component:ErrorComponent},
 ];
 

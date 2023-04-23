@@ -46,6 +46,7 @@ import { AccesoLoginComponent } from './paginas/acceso-login/acceso-login.compon
 import { AccesoRegistroComponent } from './paginas/acceso-registro/acceso-registro.component';
 import { AccesoRestringidoComponent } from './paginas/acceso-restringido/acceso-restringido.component';
 import { AuthGuard } from './guard/auth.guard';
+import { AuthLoginGuard } from './guard/auth-login.guard';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -89,9 +90,9 @@ const routes: Routes = [
   {path:"api/productos/add",component:ProductosAddComponent},
   {path:"api/productos/editar/:id",component:ApiRestProductosEditComponent},
   {path:"api/productos/fotos/:id",component:ApiRestProductosFotosComponent},
-  {path:"login",component:AccesoLoginComponent},
-  {path:"registro",component:AccesoRegistroComponent},
-  //aqui se restringe esta clase por ejemplo  
+  //aqui se restringe esta clase por ejemplo 
+  {path:"login",canActivate: [AuthLoginGuard],component:AccesoLoginComponent},
+  {path:"registro",canActivate: [AuthLoginGuard],component:AccesoRegistroComponent},   
   {path:"restringido",canActivate: [AuthGuard],component:AccesoRestringidoComponent},
   {path:"**",component:ErrorComponent},
 ];
